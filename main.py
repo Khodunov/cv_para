@@ -1,3 +1,12 @@
 from flask import Flask, render_template
 
-# Basic code as in FastAPI
+
+app = Flask(__name__)
+
+@app.get("/")
+def main_page():
+    return render_template('index.html')
+
+
+if __name__ == "__main__":
+    app.run()
